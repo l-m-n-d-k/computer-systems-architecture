@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.7.1" version="1.0">
+  <lib desc="#Wiring" name="0"/>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4"/>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#Base" name="6"/>
+  <main name="Демультиплексор 1-4"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="6" map="Button2" name="Menu Tool"/>
+    <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="6" name="Poke Tool"/>
+    <tool lib="6" name="Edit Tool"/>
+    <tool lib="6" name="Text Tool"/>
+    <sep/>
+    <tool lib="0" name="Pin"/>
+    <tool lib="0" name="Pin"><a name="facing" val="west"/><a name="output" val="true"/></tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="Демультиплексор 1-4">
+    <a name="circuit" val="Демультиплексор 1-4"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(60,60)" to="(140,60)"/>
+    <wire from="(160,60)" to="(180,60)"/>
+    <wire from="(120,60)" to="(120,510)"/>
+    <wire from="(180,60)" to="(180,510)"/>
+    <wire from="(60,100)" to="(220,100)"/>
+    <wire from="(240,100)" to="(260,100)"/>
+    <wire from="(200,100)" to="(200,510)"/>
+    <wire from="(260,100)" to="(260,510)"/>
+    <wire from="(60,140)" to="(300,140)"/>
+    <wire from="(320,140)" to="(340,140)"/>
+    <wire from="(280,140)" to="(280,510)"/>
+    <wire from="(340,140)" to="(340,510)"/>
+    <wire from="(120,290)" to="(490,290)"/>
+    <wire from="(260,300)" to="(490,300)"/>
+    <wire from="(340,310)" to="(490,310)"/>
+    <wire from="(120,350)" to="(490,350)"/>
+    <wire from="(260,360)" to="(490,360)"/>
+    <wire from="(280,370)" to="(490,370)"/>
+    <wire from="(120,410)" to="(490,410)"/>
+    <wire from="(200,420)" to="(490,420)"/>
+    <wire from="(340,430)" to="(490,430)"/>
+    <wire from="(120,470)" to="(490,470)"/>
+    <wire from="(200,480)" to="(490,480)"/>
+    <wire from="(280,490)" to="(490,490)"/>
+    <wire from="(520,300)" to="(600,300)"/>
+    <wire from="(520,360)" to="(600,360)"/>
+    <wire from="(520,420)" to="(600,420)"/>
+    <wire from="(520,480)" to="(600,480)"/>
+    <comp lib="0" loc="(60,60)" name="Pin"><a name="label" val="I"/></comp>
+    <comp lib="1" loc="(160,60)" name="NOT Gate"><a name="size" val="20"/></comp>
+    <comp lib="0" loc="(60,100)" name="Pin"><a name="label" val="a1"/></comp>
+    <comp lib="1" loc="(240,100)" name="NOT Gate"><a name="size" val="20"/></comp>
+    <comp lib="0" loc="(60,140)" name="Pin"><a name="label" val="a0"/></comp>
+    <comp lib="1" loc="(320,140)" name="NOT Gate"><a name="size" val="20"/></comp>
+    <comp lib="1" loc="(520,300)" name="AND Gate"><a name="size" val="30"/><a name="inputs" val="3"/></comp>
+    <comp lib="1" loc="(520,360)" name="AND Gate"><a name="size" val="30"/><a name="inputs" val="3"/></comp>
+    <comp lib="1" loc="(520,420)" name="AND Gate"><a name="size" val="30"/><a name="inputs" val="3"/></comp>
+    <comp lib="1" loc="(520,480)" name="AND Gate"><a name="size" val="30"/><a name="inputs" val="3"/></comp>
+    <comp lib="0" loc="(600,300)" name="Pin"><a name="facing" val="west"/><a name="output" val="true"/><a name="label" val="F0"/></comp>
+    <comp lib="0" loc="(600,360)" name="Pin"><a name="facing" val="west"/><a name="output" val="true"/><a name="label" val="F1"/></comp>
+    <comp lib="0" loc="(600,420)" name="Pin"><a name="facing" val="west"/><a name="output" val="true"/><a name="label" val="F2"/></comp>
+    <comp lib="0" loc="(600,480)" name="Pin"><a name="facing" val="west"/><a name="output" val="true"/><a name="label" val="F3"/></comp>
+    <comp lib="6" loc="(60,20)" name="Text"><a name="text" val="Демультиплексор 1-4: I - информационный вход, a1 a0 - адресные входы"/></comp>
+  </circuit>
+</project>
