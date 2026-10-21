@@ -7,7 +7,7 @@
   <lib desc="#Memory" name="4"/>
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6"/>
-  <main name="JK-триггер"/>
+  <main name="JK-триггер, внутреннее устройство"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -29,28 +29,52 @@
     <tool lib="1" name="AND Gate"/>
     <tool lib="1" name="OR Gate"/>
   </toolbar>
-  <circuit name="JK-триггер">
-    <a name="circuit" val="JK-триггер"/>
+  <circuit name="JK-триггер, внутреннее устройство">
+    <a name="circuit" val="JK-триггер, внутреннее устройство"/>
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <wire from="(60,100)" to="(210,100)"/>
-    <wire from="(60,140)" to="(150,140)"/>
-    <wire from="(150,140)" to="(150,110)"/>
-    <wire from="(150,110)" to="(210,110)"/>
-    <wire from="(60,180)" to="(180,180)"/>
-    <wire from="(180,180)" to="(180,120)"/>
-    <wire from="(180,120)" to="(210,120)"/>
-    <wire from="(250,100)" to="(330,100)"/>
-    <wire from="(250,120)" to="(290,120)"/>
-    <wire from="(290,120)" to="(290,140)"/>
-    <wire from="(290,140)" to="(330,140)"/>
-    <comp lib="4" loc="(250,100)" name="J-K Flip-Flop"/>
-    <comp lib="0" loc="(60,100)" name="Pin"><a name="label" val="J"/></comp>
-    <comp lib="0" loc="(60,140)" name="Pin"><a name="label" val="C"/></comp>
-    <comp lib="0" loc="(60,180)" name="Pin"><a name="label" val="K"/></comp>
-    <comp lib="0" loc="(330,100)" name="Pin"><a name="facing" val="west"/><a name="output" val="true"/><a name="label" val="Q"/></comp>
-    <comp lib="0" loc="(330,140)" name="Pin"><a name="facing" val="west"/><a name="output" val="true"/><a name="label" val="nQ"/></comp>
-    <comp lib="6" loc="(190,60)" name="Text"><a name="text" val="JK-триггер (по переднему фронту C)"/></comp>
+    <wire from="(60,200)" to="(160,200)"/>
+    <wire from="(60,80)" to="(310,80)"/>
+    <wire from="(310,80)" to="(310,90)"/>
+    <wire from="(310,90)" to="(350,90)"/>
+    <wire from="(180,200)" to="(180,170)"/>
+    <wire from="(180,170)" to="(350,170)"/>
+    <wire from="(380,100)" to="(420,100)"/>
+    <wire from="(420,100)" to="(420,130)"/>
+    <wire from="(420,130)" to="(450,130)"/>
+    <wire from="(380,180)" to="(420,180)"/>
+    <wire from="(420,180)" to="(420,150)"/>
+    <wire from="(420,150)" to="(450,150)"/>
+    <wire from="(480,140)" to="(520,140)"/>
+    <wire from="(560,140)" to="(700,140)"/>
+    <wire from="(560,160)" to="(700,160)"/>
+    <wire from="(640,160)" to="(640,40)"/>
+    <wire from="(640,40)" to="(330,40)"/>
+    <wire from="(330,40)" to="(330,110)"/>
+    <wire from="(330,110)" to="(350,110)"/>
+    <wire from="(620,140)" to="(620,260)"/>
+    <wire from="(620,260)" to="(320,260)"/>
+    <wire from="(320,260)" to="(320,190)"/>
+    <wire from="(320,190)" to="(350,190)"/>
+    <wire from="(60,300)" to="(520,300)"/>
+    <wire from="(520,300)" to="(520,160)"/>
+    <comp lib="6" loc="(330,20)" name="Text"><a name="text" val="JK-триггер: D-триггер + логика D = J·(не Q) или (не K)·Q"/></comp>
+    <comp lib="0" loc="(60,80)" name="Pin"><a name="label" val="J"/></comp>
+    <comp lib="0" loc="(60,200)" name="Pin"><a name="label" val="K"/></comp>
+    <comp lib="0" loc="(60,300)" name="Pin"><a name="label" val="C"/></comp>
+    <comp lib="4" loc="(560,140)" name="D Flip-Flop"/>
+    <comp lib="1" loc="(180,200)" name="NOT Gate"><a name="size" val="20"/></comp>
+    <comp lib="1" loc="(380,100)" name="AND Gate"><a name="size" val="30"/><a name="inputs" val="2"/></comp>
+    <comp lib="1" loc="(380,180)" name="AND Gate"><a name="size" val="30"/><a name="inputs" val="2"/></comp>
+    <comp lib="1" loc="(480,140)" name="OR Gate"><a name="size" val="30"/><a name="inputs" val="2"/></comp>
+    <comp lib="0" loc="(700,140)" name="Pin"><a name="facing" val="west"/><a name="output" val="true"/><a name="label" val="Q"/></comp>
+    <comp lib="0" loc="(700,160)" name="Pin"><a name="facing" val="west"/><a name="output" val="true"/><a name="label" val="nQ"/></comp>
+    <comp lib="6" loc="(105,180)" name="Text"><a name="text" val="не K"/></comp>
+    <comp lib="6" loc="(395,75)" name="Text"><a name="text" val="J и не Q"/></comp>
+    <comp lib="6" loc="(395,215)" name="Text"><a name="text" val="не K и Q"/></comp>
+    <comp lib="6" loc="(480,115)" name="Text"><a name="text" val="ИЛИ"/></comp>
+    <comp lib="6" loc="(560,100)" name="Text"><a name="text" val="D-триггер"/></comp>
+    <comp lib="6" loc="(300,320)" name="Text"><a name="text" val="C - такт, по переднему фронту записывается D"/></comp>
   </circuit>
 </project>
